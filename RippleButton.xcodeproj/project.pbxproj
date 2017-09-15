@@ -15,7 +15,8 @@
 		C72F31F11F6A995B00DFE853 /* RippleButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F31F01F6A995B00DFE853 /* RippleButtonTests.swift */; };
 		C72F31FC1F6A995B00DFE853 /* RippleButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F31FB1F6A995B00DFE853 /* RippleButtonUITests.swift */; };
 		C72F320A1F6A996F00DFE853 /* RippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F32091F6A996F00DFE853 /* RippleButton.swift */; };
-		C72F320C1F6A9B5F00DFE853 /* RippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F320B1F6A9B5F00DFE853 /* RippleView.swift */; };
+		C72F320C1F6A9B5F00DFE853 /* RippleCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F320B1F6A9B5F00DFE853 /* RippleCircleView.swift */; };
+		C76845541F6B614200D8F0BC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76845531F6B614200D8F0BC /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,11 @@
 		C72F31FB1F6A995B00DFE853 /* RippleButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleButtonUITests.swift; sourceTree = "<group>"; };
 		C72F31FD1F6A995B00DFE853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72F32091F6A996F00DFE853 /* RippleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleButton.swift; sourceTree = "<group>"; };
-		C72F320B1F6A9B5F00DFE853 /* RippleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleView.swift; sourceTree = "<group>"; };
+		C72F320B1F6A9B5F00DFE853 /* RippleCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleCircleView.swift; sourceTree = "<group>"; };
+		C76845531F6B614200D8F0BC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C76845581F6B661700D8F0BC /* RippleButton-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RippleButton-Bridging-Header.h"; sourceTree = "<group>"; };
+		C76845591F6B661700D8F0BC /* UIImageEffects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
+		C768455A1F6B661800D8F0BC /* UIImageEffects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +108,14 @@
 			children = (
 				C72F31DB1F6A995B00DFE853 /* AppDelegate.swift */,
 				C72F31DD1F6A995B00DFE853 /* ViewController.swift */,
-				C72F320B1F6A9B5F00DFE853 /* RippleView.swift */,
+				C72F320B1F6A9B5F00DFE853 /* RippleCircleView.swift */,
 				C72F32091F6A996F00DFE853 /* RippleButton.swift */,
+				C76845531F6B614200D8F0BC /* UIView+Extension.swift */,
 				C72F31DF1F6A995B00DFE853 /* Main.storyboard */,
 				C72F31E21F6A995B00DFE853 /* Assets.xcassets */,
 				C72F31E41F6A995B00DFE853 /* LaunchScreen.storyboard */,
 				C72F31E71F6A995B00DFE853 /* Info.plist */,
+				C76845551F6B660700D8F0BC /* UIImageEffects */,
 			);
 			path = RippleButton;
 			sourceTree = "<group>";
@@ -129,6 +136,16 @@
 				C72F31FD1F6A995B00DFE853 /* Info.plist */,
 			);
 			path = RippleButtonUITests;
+			sourceTree = "<group>";
+		};
+		C76845551F6B660700D8F0BC /* UIImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				C768455A1F6B661800D8F0BC /* UIImageEffects.h */,
+				C76845591F6B661700D8F0BC /* UIImageEffects.m */,
+				C76845581F6B661700D8F0BC /* RippleButton-Bridging-Header.h */,
+			);
+			path = UIImageEffects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +217,7 @@
 					C72F31D71F6A995B00DFE853 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = YL49D2HU6K;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					C72F31EB1F6A995B00DFE853 = {
@@ -270,7 +288,8 @@
 			files = (
 				C72F320A1F6A996F00DFE853 /* RippleButton.swift in Sources */,
 				C72F31DE1F6A995B00DFE853 /* ViewController.swift in Sources */,
-				C72F320C1F6A9B5F00DFE853 /* RippleView.swift in Sources */,
+				C72F320C1F6A9B5F00DFE853 /* RippleCircleView.swift in Sources */,
+				C76845541F6B614200D8F0BC /* UIView+Extension.swift in Sources */,
 				C72F31DC1F6A995B00DFE853 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,11 +444,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = YL49D2HU6K;
 				INFOPLIST_FILE = RippleButton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xhey.top.RippleButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RippleButton/UIImageEffects/RippleButton-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -438,11 +460,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = YL49D2HU6K;
 				INFOPLIST_FILE = RippleButton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xhey.top.RippleButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RippleButton/UIImageEffects/RippleButton-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -524,6 +548,7 @@
 				C72F32021F6A995B00DFE853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C72F32031F6A995B00DFE853 /* Build configuration list for PBXNativeTarget "RippleButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +557,7 @@
 				C72F32051F6A995B00DFE853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C72F32061F6A995B00DFE853 /* Build configuration list for PBXNativeTarget "RippleButtonUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +566,7 @@
 				C72F32081F6A995B00DFE853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
